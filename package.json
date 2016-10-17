@@ -1,7 +1,7 @@
 {
-  "name": "thinkful-full-stack-template",
+  "name": "veggie-count",
   "version": "0.0.1",
-  "description": "A full-stack template for Thinkful students",
+  "description": "An app for keeping track of your vegetable intake",
   "main": "index.js",
   "main:server": "server/index.js",
   "main:client": "client/js/index.js",
@@ -82,6 +82,12 @@
   },
   "dependencies": {
     "express": "^4.14.0",
-    "isomorphic-fetch": "^2.2.1"
+    "isomorphic-fetch": "^2.2.1",
+    "react": "^15.3.2",
+    "react-dom": "^15.3.2",
+    "react-redux": "^4.4.5",
+    "redux": "^3.6.0",
+    "redux-thunk": "^2.1.0",
+    "thunk": "0.0.1"
   }
 }
