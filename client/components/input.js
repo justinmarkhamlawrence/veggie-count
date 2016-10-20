@@ -1,14 +1,24 @@
 import React from 'react';
 
-let UserInput = (props) => {
-  return (
-    <div className='user-input'>
-      <form id='input-form' onSubmit={props.handleSubmit}>
-        <input className='input-box' type='text' value={props.value} onChange={props.handleChange}/>
-        <button style={props.buttonStyle} className='submit-button' type='submit'>+</button>
-      </form>
-    </div>
-  );
-};
+let UserInput = React.createClass({
+  handleSubmit: function(e){
+    e.preventDefault()
+    let newTask = this.refs.theInput.value;
+		console.log('NewTask ', newTask);
+		this.props.onTodoSubmit(newTask);
+		//Clears the value on Submit
+		this.refs.theInput.value = '';
+  },
+  render: function(props) {
+    return (
+      <div className='user-input'>
+        <form id='input-form' onSubmit={this.handleSubmit}>
+          <input className='input-box' type='text' ref='theInput' />
+          <button className='submit-button' type='submit'>+</button>
+        </form>
+      </div>
+    )
+  }
+})
 
-export UserInput;
+module.exports = UserInput
