@@ -4,7 +4,7 @@ let UserInput = React.createClass({
   handleSubmit: function(e){
     e.preventDefault()
     let newTask = this.refs.theInput.value;
-		console.log('NewTask ', newTask);
+		// console.log('NewTask ', newTask);
 		this.props.onTodoSubmit(newTask);
 		//Clears the value on Submit
 		this.refs.theInput.value = '';

@@ -1,13 +1,25 @@
 import React from 'react';
 
-let Display = function(props) {
-  return (
-    <div>
-      <ul className='list'>
-        <li>Hi there</li>
-      </ul>
-    </div>
-  )
-}
+const Display = React.createClass({
+
+  render: function(props){
+    console.log('display.js item: ', this.props.item)
+    // var name = this.props.item.name
+    // var id = this.props.item._id
+    // var itemList = this.props.item.map(function(){
+    //   return (
+    //     <li key={id}>{name}</li>
+    //   )
+    // });
+    // console.log(this.props.item,"from the Display")
+    return (
+      <div>
+        <ul className='list'>
+
+        </ul>
+      </div>
+    )
+  }
+})
 
 module.exports = Display
