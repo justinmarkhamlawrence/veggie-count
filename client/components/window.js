@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDom from 'react-dom';
 import UserInput from './input';
 import Display from './display'
-
+// import Gchart from './chart'
 let Wrapper = React.createClass({
   onTodoSubmit: function(item){
     this.props.onTodoSubmit(item);
@@ -14,6 +14,7 @@ let Wrapper = React.createClass({
       <div>
         <Display item={this.props.item}/>
         <UserInput onTodoSubmit={this.onTodoSubmit}/>
+        
       </div>
     );
   }

@@ -8,7 +8,6 @@ import thunk from 'redux-thunk'
 import Add from '../state/reducer'
 var actions = require('../state/actions')
 import store from '../state/store'
-
 //let store = applyMiddleware(thunk)(createStore)(Add)
 
 let Holder = React.createClass({
